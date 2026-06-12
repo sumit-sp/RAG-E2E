@@ -1,1 +1,2 @@
 PyMuPDF
+langchain-text-splitters

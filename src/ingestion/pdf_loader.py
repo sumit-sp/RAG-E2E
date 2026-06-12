@@ -55,7 +55,6 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Iterator
 
-
 # ---------------------------------------------------------------------------
 # Result types
 # ---------------------------------------------------------------------------
@@ -98,7 +97,6 @@ class TextBlock:
         preview = self.text[:60].replace("\n", " ")
         return f"TextBlock(y0={self.y0:.1f}, text={preview!r})"
 
-
 @dataclass
 class PageResult:
     """Extraction result for a single page."""
@@ -110,7 +108,6 @@ class PageResult:
     def text(self) -> str:
         """Plain text of all body blocks joined by newlines."""
         return "\n".join(b.text.strip() for b in self.blocks)
-
 
 # ---------------------------------------------------------------------------
 # Main class
@@ -542,7 +539,6 @@ class PDFBodyExtractor:
             raise ValueError(
                 f"page_num={page_num} is out of range [1, {self._total_pages}]"
             )
-
 
 # ---------------------------------------------------------------------------
 # CLI smoke-test
